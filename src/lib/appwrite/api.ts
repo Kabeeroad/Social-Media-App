@@ -223,7 +223,7 @@ export async function searchPosts(searchTerm: string) {
     console.log(error);
   }
 }
-
+// ======================  InfinitePosts  ==================
 export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
   const queries: any[] = [Query.orderDesc("$updatedAt"), Query.limit(9)];
 
@@ -246,7 +246,7 @@ export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
   }
 }
 
-// ============================== GET POST BY ID
+// ============================== GET POST BY ID ===================//
 export async function getPostById(postId?: string) {
   if (!postId) throw Error;
 
